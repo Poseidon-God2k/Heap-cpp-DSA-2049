@@ -152,6 +152,5 @@ int main() {
 	        heap.insert_node_BFS(root, temp);
         }
         heap.print_BFS(root);
-	system("pause");
 	return 0;
 }
