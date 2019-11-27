@@ -122,6 +122,7 @@ public:
 
 };
 int main() {
+	// heap with array
 	ifstream InFile("input.txt");
 	int *arr = new int[8];
 	int i = 0;
@@ -138,18 +139,19 @@ int main() {
 	   size--;
 	}
 	InFile.close();
-   node * root = new node();
-   Tree_heap heap;
-   fstream In2_File;
-   In2_File.open("input.txt");
-   int temp;
-   In2_File >> temp;
-   root->data = temp;
-   while (!In2_File.eof()) {
-	   In2_File >> temp;
-	   heap.insert_node_BFS(root, temp);
-   }
-   heap.print_BFS(root);
+	// heap with tree
+        node * root = new node();
+        Tree_heap heap;
+        fstream In2_File;
+        In2_File.open("input.txt");
+        int temp;
+        In2_File >> temp;
+        root->data = temp;
+        while (!In2_File.eof()) {
+	        In2_File >> temp;
+	        heap.insert_node_BFS(root, temp);
+        }
+        heap.print_BFS(root);
 	system("pause");
 	return 0;
 }
